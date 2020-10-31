@@ -9,10 +9,6 @@ repos:
       - id: check-added-large-files
       - id: check-yaml
         exclude: (template|ci).*\.(json|yml|yaml)$
-#  - repo: https://github.com/adrienverge/yamllint
-#    rev: v1.25.0
-#    hooks:
-#      - id: yamllint
   - repo: https://github.com/asottile/seed-isort-config
     rev: v1.9.3
     hooks:
@@ -56,8 +52,3 @@ repos:
     hooks:
       - id: pylint
         args: ["--disable=similarities"]
-  - repo: https://github.com/awslabs/cfn-python-lint
-    rev: v0.38.0 # The version of cfn-lint to use
-    hooks:
-      - id: cfn-python-lint
-        files: ^(template|ci).*\.(json|yml|yaml)$
