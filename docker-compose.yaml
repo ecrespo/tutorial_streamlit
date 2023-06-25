@@ -1,0 +1,14 @@
+#Crea el archivo docker-compose a partir del archivo Dockerfile
+
+version: '3.1'
+
+
+services:
+  web:
+    build: .
+    image: streamlit_local
+    container_name: streamlit_app
+    restart: always
+    expose:
+      - "8501:8501"
+    command: poetry run streamlit run app/main.py

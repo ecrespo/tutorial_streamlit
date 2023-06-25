@@ -29,9 +29,9 @@ def main():
 
     # Ajusta el tamaño de fuente de las etiquetas
     for label in venn.set_labels:
-        label.set_fontsize(12)
+        label.set_fontsize(14)
     for label in venn.subset_labels:
-        label.set_fontsize(10)
+        label.set_fontsize(12)
 
     plt.figure(figsize=(10, 10))
     plt.show()
