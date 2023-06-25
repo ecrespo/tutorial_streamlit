@@ -8,7 +8,7 @@ from PIL import Image
 # Permite definir que la función este en cache.
 
 
-@st.cache
+@st.cache_data
 def run_fxn(n: int) -> list:
     return range(n)
 
@@ -109,18 +109,18 @@ def main():
     # Images
 
     st.subheader("Archivo de imagen")
-    img = Image.open("example.jpg")
+    img = Image.open("pages/resources/example.jpg")
     st.image(img, width=300, caption="Simple Imagen")
 
     st.subheader("Archivo de vídeo")
     # Videos
-    vid_file = open("Streamlit Campo magnético-uRDO3trlSG8.mp4", "rb").read()
+    vid_file = open("pages/resources/Streamlit Campo magnético-uRDO3trlSG8.mp4", "rb").read()
     # vid_bytes = vid_file.read()
     st.video(vid_file)
 
     st.subheader("Archivo de audio")
     # Audio
-    audio_file = open("040-data-science-year-in-review.mp3", "rb").read()
+    audio_file = open("pages/resources/040-data-science-year-in-review.mp3", "rb").read()
     st.audio(audio_file, format="audio/mp3")
 
     st.header("Otras opciones que permite la función write")
@@ -156,7 +156,7 @@ def main():
     st.balloons()
 
     st.header("Trabajando con data science")
-    df = pd.read_csv("Venezuela.csv", index_col=0)
+    df = pd.read_csv("pages/resources/Venezuela.csv", index_col=0)
 
     st.subheader("Dataframe")
     st.dataframe(df)

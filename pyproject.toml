@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "tutorial-streamlit"
+version = "0.1.0"
+description = "Streamlit tutorials"
+authors = ["Ernesto Crespo <ecrespo@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+packages = [{include = "tutorial_streamlit"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.23.1"
+numpy = "^1.25.0"
+matplotlib = "^3.7.1"
+matplotlib-venn = "^0.11.9"
+matplotlib-venn-wordcloud = "^0.2.6"
+plost = "^0.2.5"
+quandl = "^3.7.0"
+radar = "^0.3"
+openpyxl = "^3.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
