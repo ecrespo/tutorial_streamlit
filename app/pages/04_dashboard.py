@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 # mostrar el directorio de trabajo con python
 
 
-with open('app/pages/resources/style.css') as f:
+with open('./pages/resources/style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Data
@@ -19,7 +19,7 @@ stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/maste
 
 # Row A
 a1, a2, a3 = st.columns(3)
-a1.image(Image.open('app/pages/resources/streamlit-logo-secondary-colormark-darktext.png'))
+a1.image(Image.open('./pages/resources/streamlit-logo-secondary-colormark-darktext.png'))
 a2.metric("Viento", "1.2 kph", "-8%")
 a3.metric("Humedad", "86%", "4%")
 
